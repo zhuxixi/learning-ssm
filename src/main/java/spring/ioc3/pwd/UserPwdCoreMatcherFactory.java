@@ -1,4 +1,4 @@
-package spring.ioc2.pwd;
+package spring.ioc3.pwd;
 
 public class UserPwdCoreMatcherFactory {
 

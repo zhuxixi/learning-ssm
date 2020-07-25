@@ -1,19 +1,19 @@
-package spring.ioc2;
+package spring.ioc3;
 
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-import spring.ioc2.check.UserPwdChecker;
-import spring.ioc2.check.UserPwdConfig;
+import spring.ioc3.pwd.UserPwdChecker;
+import spring.ioc3.pwd.UserPwdConfig;
 
 /**
  * @author zhuzh
  * @date 2020.07.25
  */
 @Configuration
-@ComponentScan("spring.ioc2")
+@ComponentScan("spring.ioc1")
 public class AnnotationConfig {
 
     /**

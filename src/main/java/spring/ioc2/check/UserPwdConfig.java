@@ -1,4 +1,4 @@
-package spring.ioc2.pwd;
+package spring.ioc2.check;
 
 /**
  *
@@ -6,6 +6,9 @@ package spring.ioc2.pwd;
  * @date 2020.07.25
  */
 public class UserPwdConfig {
+
+
+
     /**
      * 开启内存缓存
      */

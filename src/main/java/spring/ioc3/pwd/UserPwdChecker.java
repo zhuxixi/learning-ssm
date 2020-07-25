@@ -1,4 +1,4 @@
-package spring.ioc2.pwd;
+package spring.ioc3.pwd;
 
 /**
  * 登录服务密码校验Bean
