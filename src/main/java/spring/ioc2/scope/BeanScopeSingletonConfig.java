@@ -10,7 +10,7 @@ import spring.ioc2.bean.UserPwdConfig;
  * @date 2020.07.25
  */
 @Configuration
-public class AnnotationConfig {
+public class BeanScopeSingletonConfig {
 
     @Bean
     public UserPwdConfig newUserPwdConfig(){
@@ -21,7 +21,7 @@ public class AnnotationConfig {
      * 使用bean注解声明一个Bean
      * @return
      */
-    @Bean(name = "paramChecker")
+    @Bean(name = "singletonChecker")
     @Scope("singleton")
     public UserPwdChecker newParamChecker(UserPwdConfig config1){
         return new UserPwdChecker(config1);
