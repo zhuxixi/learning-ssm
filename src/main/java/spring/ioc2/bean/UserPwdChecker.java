@@ -1,10 +1,9 @@
-package spring.ioc2.check;
+package spring.ioc2.bean;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
+import spring.common.CommonUtil;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.beans.ConstructorProperties;
 
 /**
  * 登录服务密码校验Bean
@@ -14,23 +13,30 @@ import java.beans.ConstructorProperties;
 public class UserPwdChecker {
 
     private UserPwdConfig config ;
+
+
     public UserPwdChecker(UserPwdConfig config1){
       config = config1;
     }
 
     @PostConstruct
     public void init(){
+        CommonUtil.ps("正在初始化Bean,执行init方法...");
        if (config.isLocalCacheOn()){
            System.out.println("UserPwdChecker local cache on");
        }
        if (config.isSaleNoNumberCheckOn()){
            System.out.println("UserPwdChecker 开启了工号数字检查");
        }
+        CommonUtil.ps("初始化Bean结束,init方法执行结束...");
+
     }
 
     @PreDestroy
     public void destroy(){
-        System.out.println("cleaning cache");
+        CommonUtil.ps("正在销毁Bean，执行清理方法");
+        CommonUtil.ps("缓存清理完毕");
+        CommonUtil.ps("Bean销毁结束，清理方法执行完毕");
     }
 
     /**
@@ -48,5 +54,13 @@ public class UserPwdChecker {
         }
 
         return password.equals(expectValue);
+    }
+
+    public UserPwdConfig getConfig() {
+        return config;
+    }
+
+    public void setConfig(UserPwdConfig config) {
+        this.config = config;
     }
 }
