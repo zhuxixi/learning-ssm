@@ -1,9 +1,12 @@
-package spring.ioc1;
+package spring.ioc2;
 
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import spring.ioc2.pwd.UserPwdChecker;
+import spring.ioc2.pwd.UserPwdConfig;
 
 /**
  * @author zhuzh
@@ -17,8 +20,9 @@ public class AnnotationConfig {
      * 使用bean注解声明一个Bean
      * @return
      */
-    @Bean
-    public ParamChecker newParamChecker(){
-        return new ParamChecker();
+    @Bean(name = "paramChecker")
+    @Scope("singleton")
+    public UserPwdChecker newParamChecker(){
+        return new UserPwdChecker(new UserPwdConfig());
     }
 }

@@ -1,6 +1,18 @@
-package spring.ioc1;
+package spring.ioc2.pwd;
 
-public class ParamChecker {
+/**
+ * 登录服务密码校验Bean
+ * @author zhuzh
+ * @date 2020.07.25
+ */
+public class UserPwdChecker {
+
+
+
+    public UserPwdChecker(UserPwdConfig config){
+
+    }
+
 
     /**
      * check password that user entered right or not
