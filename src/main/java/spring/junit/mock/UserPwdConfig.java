@@ -1,11 +1,15 @@
-package spring.ioc3.pwd;
+package spring.junit.mock;
+
+import org.springframework.context.annotation.Configuration;
 
 /**
  *
  * @author zhuzh
  * @date 2020.07.25
  */
+@Configuration
 public class UserPwdConfig {
+
     /**
      * 开启内存缓存
      */
