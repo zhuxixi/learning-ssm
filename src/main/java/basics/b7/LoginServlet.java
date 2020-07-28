@@ -16,7 +16,7 @@ public class LoginServlet implements Servlet {
         String url = servletConfig.getInitParameter("JDBC_URL");
         String user = servletConfig.getInitParameter("JDBC_USER");
         String password = servletConfig.getInitParameter("JDBC_PASSWORD");
-        DBUtil.getInstance(driver,url,user,password);
+        DBUtil.prepare(driver,url,user,password);
     }
 
     @Override

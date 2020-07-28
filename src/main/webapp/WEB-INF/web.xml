@@ -49,8 +49,6 @@
         </init-param>
     </servlet>
 
-
-
     <!-- Define the Manager Servlet Mapping -->
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>

@@ -2,17 +2,13 @@ package basics.b7;
 
 import java.sql.*;
 
+/**
+ * 数据库操作类
+ * @author zhuzh
+ * @date 2020.07.28
+ */
 public class DBUtil {
-//    /**
-//     * MySQL 8.0 以上版本 - JDBC 驱动名及数据库 URL
-//     */
-//    private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-//    private static final String DB_URL = "jdbc:mysql://123.207.173.146:3306/login";
-//    /**
-//     * 数据库的用户名与密码，需要根据自己的设置
-//     */
-//    private static final String USER = "test";
-//    private static final String PASS = "Clic1234!";
+
     private static DBUtil dbUtil;
     private static Connection connection;
 
@@ -24,7 +20,7 @@ public class DBUtil {
      * @param password
      * @return
      */
-    public static DBUtil getInstance(String driver,String url,String user,String password){
+    public static void prepare(String driver, String url, String user, String password){
         if (dbUtil==null){
             synchronized (DBUtil.class){
                 if (dbUtil==null){
@@ -32,11 +28,10 @@ public class DBUtil {
                 }
             }
         }
-        return dbUtil;
     }
 
     /**
-     *
+     * 初始化结束后直接get即可
      * @return
      */
     public static DBUtil getInstance(){
@@ -45,10 +40,25 @@ public class DBUtil {
         }
         return dbUtil;
     }
+
+    /**
+     * 单例类的构造方法必须私有化，否则可能有人通过new 创造多个实例
+     * @param driver
+     * @param url
+     * @param user
+     * @param password
+     */
     private DBUtil(String driver,String url,String user,String password){
         getConnection(driver, url, user, password);
     }
 
+    /**
+     * 为了节约资源，只创建一个连接
+     * @param driver
+     * @param url
+     * @param user
+     * @param password
+     */
     private void getConnection(String driver,String url,String user,String password){
         try {
             // 注册 JDBC 驱动
@@ -61,6 +71,12 @@ public class DBUtil {
         }
     }
 
+    /**
+     * 实际的业务方法
+     * @param username
+     * @param password
+     * @return
+     */
     public boolean checkUser(String username,String password) {
         Statement stmt = null;
         boolean result = false;
