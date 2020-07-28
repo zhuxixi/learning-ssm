@@ -32,8 +32,20 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>basics.b7.LoginServlet</servlet-class>
         <init-param>
-            <param-name>debug</param-name>
-            <param-value>2</param-value>
+            <param-name>JDBC_DRIVER</param-name>
+            <param-value>com.mysql.cj.jdbc.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>JDBC_URL</param-name>
+            <param-value>jdbc:mysql://123.207.173.146:3306/login</param-value>
+        </init-param>
+        <init-param>
+            <param-name>JDBC_USER</param-name>
+            <param-value>test</param-value>
+        </init-param>
+        <init-param>
+            <param-name>JDBC_PASSWORD</param-name>
+            <param-value>Clic1234!</param-value>
         </init-param>
     </servlet>
 
