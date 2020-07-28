@@ -2,15 +2,7 @@ package spring.junit;
 
 
 import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import spring.common.CommonUtil;
-import spring.junit.mock.MockJunitTestingConfig;
 import spring.junit.mock.UserPwdChecker;
 import spring.junit.mock.UserService;
 
