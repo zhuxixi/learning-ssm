@@ -17,6 +17,8 @@ public class LoginServlet implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+        String username = servletRequest.getParameter("username");
+        String password = servletRequest.getParameter("password");
         System.out.println(123);
     }
 

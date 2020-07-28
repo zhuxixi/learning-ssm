@@ -11,15 +11,15 @@
                     alert(this.responseText);
                 }
             };
-            var name = document.getElementById("username").textContent;
-            var pwd = document.getElementById("password").textContent;
+            var name = username.value;
+            var pwd = password.value;
             xhttp.open("GET", "login/login.do?username="+name+"&password="+pwd, true);
             xhttp.send();
         }
     </script>
 </head>
 <body>
-<form>
+<form name="loginForm">
     登录：<input id="username" type="text" name="username">
     <br>
     密码：<input id="password" type="password" name="password" >
