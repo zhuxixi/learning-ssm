@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script>
+        window.onload=function(){
+            var url="http://localhost:8080/login/login.do";
+            var request = new XMLHttpRequest();
+            request.onload = function (ev) {
+                if (request.status==200){
+                    console.log(request.responseText);
+                }
+            }
+            request.open("GET",url);
+            request.send(null);
+        }
+    </script>
+</head>
+<body>
+<form action="html/success.html" method="post" >
+    登录：<input type="text" name="name">
+    <br>
+    密码：<input type="password" name="password" >
+    <br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
