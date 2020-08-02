@@ -39,7 +39,6 @@ public class LoginServlet implements Servlet {
         }catch (IllegalArgumentException e){
             e.printStackTrace();
             servletResponse.getWriter().println(e.getMessage());
-
         }
 
     }
