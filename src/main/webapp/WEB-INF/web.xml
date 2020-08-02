@@ -30,7 +30,7 @@
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>basics.b7.LoginServlet</servlet-class>
+        <servlet-class>basics.b8.LoginServlet</servlet-class>
         <init-param>
             <param-name>JDBC_DRIVER</param-name>
             <param-value>com.mysql.cj.jdbc.Driver</param-value>
