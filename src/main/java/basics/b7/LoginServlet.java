@@ -28,7 +28,9 @@ public class LoginServlet implements Servlet {
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
         String username = servletRequest.getParameter("username");
         String password = servletRequest.getParameter("password");
-        servletResponse.getWriter().println("user check result="+DBUtil.getInstance().checkUser(username,password));
+        String result = "user check result="+DBUtil.getInstance().checkUser(username,password);
+        System.out.println(result);
+        servletResponse.getWriter().println(result);
     }
 
     @Override
