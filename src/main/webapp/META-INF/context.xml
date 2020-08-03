@@ -1,12 +1,12 @@
 <Context>
     <Resource
-        name="jdbc/login"
-        auth="Container"
-        username="test"
-        password="Clic1234!"
-        driverClassName="com.mysql.cj.jdbc.Driver"
-        maxActive="20"
-        maxIdel="20"
-        url="jdbc:mysql://123.207.173.146:3306/login"
-    />
+            name="jdbc/login"
+            auth="Container"
+            username="test"
+            password="Clic1234!"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            maxActive="8"
+            maxIdel="8"
+            url="jdbc:mysql://123.207.173.146:3306/login"
+            type="javax.sql.DataSource"/>
 </Context>
